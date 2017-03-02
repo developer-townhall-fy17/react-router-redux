@@ -41,6 +41,9 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel',
       exclude: /node_modules/
+    }, {
+      test: /\.css$/,
+      loader: isDev ? "style-loader!css-loader?sourceMap" : "style-loader!css-loader"
     }]
   }
 };
