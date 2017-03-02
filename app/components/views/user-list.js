@@ -1,26 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
-// Using "Stateless Functional Components"
-export default function(props) {
-  return (
-    <div className="data-list">
+export default props => (
+  <div className="data-list">
 
-      {props.users.map(user => {
+    {props.users.map(user => (
+      <div key={user.id} className="data-list-item">
+        <div className="details">
+          <Link to={`/users/${user.id}`}>{user.name}</Link>
+        </div>
+        <div className="controls">
+          <button onClick={() => props.deleteUser(user.id)} className="delete">Delete</button>
+        </div>
+      </div>
+    ))}
 
-        return (
-          <div key={user.id} className="data-list-item">
-            <div className="details">
-              <Link to={'/users/' + user.id}>{user.name}</Link>
-            </div>
-            <div className="controls">
-              <button onClick={props.deleteUser.bind(null, user.id)} className="delete">Delete</button>
-            </div>
-          </div>
-        );
-
-      })}
-
-    </div>
-  );
-}
+  </div>
+)
