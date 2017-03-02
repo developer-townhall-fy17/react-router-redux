@@ -1,6 +1,10 @@
 html {
   box-sizing: border-box;
   color: #222;
+  font: 10pt Arial;
+}
+
+.app {
   font: 12pt Arial;
 }
 
