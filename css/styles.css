@@ -82,8 +82,14 @@ form {
   margin-top: 1em;
 }
 
-form button{
+form button {
   margin-left: 0.5em;
+}
+
+form > div {
+  margin-top: 10px;
+  width: 400px;
+  height: 300px;
 }
 
 
