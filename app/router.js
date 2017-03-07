@@ -19,6 +19,12 @@ export default (
 
       <Route path="/" component={Home} />
 
+      <Route path="widgets">
+        <Route component={SearchLayoutContainer}>
+          <IndexRoute component={WidgetListContainer} />
+        </Route>
+      </Route>
+
       <Route path="users">
         <Route component={SearchLayoutContainer}>
           <IndexRoute component={UserListContainer} />
@@ -26,15 +32,10 @@ export default (
         <Route path=":userId" component={UserProfileContainer} />
       </Route>
 
-      <Route path="widgets">
-        <Route component={SearchLayoutContainer}>
-          <IndexRoute component={WidgetListContainer} />
-        </Route>
-      </Route>
-
     </Route>
 
     <Route path="/simple-component" component={SimpleComponent} />
+
 
   </Router>
 )
