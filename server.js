@@ -35,9 +35,9 @@ const app = new WebpackDevServer(webpack(config), {
 
 app.use('/', express.static(__dirname))
 //app.use('/api', jsonServer.router('data/db.json'))
-app.listen(3000, 'localhost', (err) => {
+app.listen(3002, 'localhost', (err) => {
   if (err) {
     console.log(err)
   }
-  console.log('Listening at localhost:3000')
+  console.log('Listening at localhost:3002')
 });
